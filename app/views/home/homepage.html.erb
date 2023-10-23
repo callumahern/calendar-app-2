@@ -12,7 +12,7 @@
       <div class="card-header">
         <div class="card-title">
           <% if entry.class == Mood %>
-            <%= entry.created_at.strftime("%I:00").to_i < 12 ? '(AM)' : '(PM)' %>
+            <%= entry.created_at.strftime("%H:%M").to_i < 12 ? '(AM)' : '(PM)' %>
           <% end %>
           <%= entry.class %>:
           <%= entry.title %>
