@@ -8,7 +8,7 @@
 
     <div>
       <%= f.label :entry_date, style: "display: block" %>
-      <%= f.date_field :entry_date %>
+      <%= f.date_field :entry_date, :value => Time.now.strftime('%Y-%m-%d') %>
     </div>
 
     <div>
