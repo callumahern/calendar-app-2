@@ -1,0 +1,15 @@
+<%= form_with model: @mood, url: new_path  do |f| %>
+  <div class="form-group">
+    <%= f.label :mood %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :entry_date, style: "display: block" %>
+    <%= f.date_field :entry_date %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end%>
