@@ -7,6 +7,8 @@ class MoodController < ApplicationController
     @mood = Mood.new(mood_params)
     if @mood.save
       redirect_to root_path
+    else
+      'hello'
     end
   end
 

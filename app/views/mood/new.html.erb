@@ -1,15 +1,22 @@
-<%= form_with model: @mood, url: new_path  do |f| %>
-  <div class="form-group">
-    <%= f.label :mood %>
-    <%= f.text_field :title %>
-  </div>
+<div class="container mt-5">
+  <%= form_with model: @mood, url: mood_new_path  do |f| %>
+    <div class="form-group">
+      <%= f.label :mood %> <br>
+      <%= f.label :mood, "Red", value: "Red"  %>
+      <%= f.radio_button :title, 'Red' %>
+      <%= f.label :mood, "Amber", value: "Amber" %>
+      <%= f.radio_button :title, 'Amber' %>
+      <%= f.label :mood, "Green", value: "Green" %>
+      <%= f.radio_button :title, 'Green' %>
+    </div><br>
 
-  <div>
-    <%= f.label :entry_date, style: "display: block" %>
-    <%= f.date_field :entry_date %>
-  </div>
-
-  <div>
-    <%= f.submit %>
-  </div>
-<% end%>
+    <div>
+      <%= f.label :entry_date, style: "display: block" %>
+      <%= f.date_field :entry_date %>
+    </div>
+    <div>
+      <%= f.submit %>
+    </div>
+  <% end%>
+  <%= link_to 'Back', root_path %>
+</div>
