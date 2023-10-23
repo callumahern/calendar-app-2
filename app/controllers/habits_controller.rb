@@ -8,7 +8,7 @@ class HabitsController < ApplicationController
     if @habits.save
       redirect_to root_path
     else
-      'hello'
+      render :new
     end
   end
 

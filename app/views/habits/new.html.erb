@@ -1,8 +1,11 @@
 <div class="container mt-5">
   <%= form_with model: @habits, url: habits_new_path  do |f| %>
     <div class="form-group">
-      <%= f.label :habits %>
-      <%= f.text_field :title %>
+      <%= f.label :habits %>: <br>
+      <% Habits::HABIT_LIST.each do |key| %>
+        <%= f.check_box :title, { multiple: true }, key,  nil %>
+        <%= f.label key %>
+      <% end %>
     </div><br>
 
 
